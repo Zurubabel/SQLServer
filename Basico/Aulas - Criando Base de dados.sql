@@ -31,14 +31,14 @@
 	"Coxinha" (7 letras) -> Cox
 */
 
--- Aula 4 - Criando Base de dados (Parte 1)
+-- Aula 4 - Criando Tabelas (Parte 1)
 
 CREATE TABLE tb_DadosProduto (
 	nmProduto VARCHAR(50) NOT NULL, -- Obrigatório
 	vlProduto DECIMAL(6,2) NOT NULL
 );
 
--- Aula 5 - Criando Base de dados (Parte 2)
+-- Aula 5 - Criando Tabelas (Parte 2)
 
 CREATE TABLE tb_Clientes (
 	nmCliente VARCHAR(50) NOT NULL,
