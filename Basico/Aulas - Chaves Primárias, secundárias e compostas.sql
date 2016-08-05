@@ -28,19 +28,16 @@
 
 	nmProduto VARCHAR(3);
 
-	"Coxinha" (7 letras) -> Cox
 */
 
--- Aula 4 - Criando Tabelas (Parte 1)
-
-CREATE TABLE tb_DadosProduto (
+CREATE TABLE tb_Produtos (
+	cdProduto INT PRIMARY KEY IDENTITY(1,1),
 	nmProduto VARCHAR(50) NOT NULL, -- Obrigatório
 	vlProduto DECIMAL(6,2) NOT NULL
 );
 
--- Aula 5 - Criando Tabelas (Parte 2)
-
 CREATE TABLE tb_Clientes (
+	cdCliente INT PRIMARY KEY IDENTITY(1,1),
 	nmCliente VARCHAR(50) NOT NULL,
 	dtNascimento DATE,
 	inSexo VARCHAR(1) NOT NULL,
@@ -50,5 +47,3 @@ CREATE TABLE tb_Clientes (
 	nmTelefone1 VARCHAR(15),
 	nmTelefone2 VARCHAR(15)
 )
-
--- Aula 6 - Criando Tabelas (Parte 3) 
