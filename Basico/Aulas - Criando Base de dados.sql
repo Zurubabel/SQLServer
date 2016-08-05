@@ -37,3 +37,16 @@ CREATE TABLE tb_DadosProduto (
 	nmProduto VARCHAR(50) NOT NULL, -- Obrigatório
 	vlProduto DECIMAL(6,2) NOT NULL
 );
+
+-- Aula 5 - Criando Base de dados (Parte 2)
+
+CREATE TABLE tb_Clientes (
+	nmCliente VARCHAR(50) NOT NULL,
+	dtNascimento DATE,
+	inSexo VARCHAR(1) NOT NULL,
+	nmEndereco VARCHAR(50),
+	nmCidade VARCHAR(50),
+	nmEstado VARCHAR(30),
+	nmTelefone1 VARCHAR(15),
+	nmTelefone2 VARCHAR(15)
+)
