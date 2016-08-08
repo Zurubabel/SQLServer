@@ -47,3 +47,18 @@ CREATE TABLE tb_Clientes (
 	nmTelefone1 VARCHAR(15),
 	nmTelefone2 VARCHAR(15)
 )
+
+CREATE TABLE tb_Vendas (
+	cdVenda INT PRIMARY KEY IDENTITY(1,1),
+	cdProduto INT NOT NULL,
+	vlProduto DECIMAL(6,2) NOT NULL
+);
+
+-- FOREIGN KEY
+-- CONSTRAINT
+
+ALTER TABLE tb_Vendas
+ADD CONSTRAINT FK_Produto_Vendas
+FOREIGN KEY (cdProduto)
+REFERENCES tb_Produtos (cdProduto)
+
