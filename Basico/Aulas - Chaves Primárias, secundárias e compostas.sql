@@ -50,9 +50,16 @@ CREATE TABLE tb_Clientes (
 
 CREATE TABLE tb_Vendas (
 	cdVenda INT PRIMARY KEY IDENTITY(1,1),
-	cdProduto INT NOT NULL,
-	vlProduto DECIMAL(6,2) NOT NULL
+	cdCliente INT NOT NULL FOREIGN KEY REFERENCES tb_Clientes (cdCliente),
+	dtVenda DATETIME NOT NULL
 );
+
+CREATE TABLE tb_ProdutoVenda (
+	cdProdutoVenda INT PRIMARY KEY IDENTITY(1,1),
+	cdVenda INT FOREIGN KEY REFERENCES tb_Vendas (cdVenda) NOT NULL,
+	cdProduto INT FOREIGN KEY REFERENCES tb_Produtos (cdProduto) NOT NULL,
+	qtProduto INT NOT NULL
+)
 
 -- FOREIGN KEY
 -- CONSTRAINT
@@ -61,4 +68,8 @@ ALTER TABLE tb_Vendas
 ADD CONSTRAINT FK_Produto_Vendas
 FOREIGN KEY (cdProduto)
 REFERENCES tb_Produtos (cdProduto)
+
+
+-- Remover a tabela de vendas
+DROP TABLE tb_Vendas
 
