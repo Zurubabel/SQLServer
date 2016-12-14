@@ -15,7 +15,7 @@ SELECT
 	E.nmSigla
 FROM tb_Clientes CL INNER JOIN tb_Enderecos EN ON CL.cdEndereco = EN.cdEndereco
 INNER JOIN tb_Cidades CI ON EN.cdCidade = CI.cdCidade
-
+INNER JOIN tb_Estados E ON CI.cdEstado = E.cdEstado;
 
 /*SELECT * FROM vw_Endereco_Completo_Clientes
-INNER JOIN tb_Estados E ON CI.cdEstado = E.cdEstado;*/
+*/
